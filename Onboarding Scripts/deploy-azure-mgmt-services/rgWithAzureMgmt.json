@@ -2,28 +2,24 @@
     "$schema": "http://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-      "workspaceName": {
-        "type": "string"
-      },
-      "workspaceLocation": {
-        "type": "string",
-        "defaultValue": "eastus"
-      },
+        "workspaceName": {
+            "type": "string"
+        },
+        "workspaceLocation": {
+            "type": "string"
+        },
         "automationAccountName": {
             "type": "string"
         },
-      "automationLocation": {
-        "type": "string",
-        "defaultValue": "eastus2"
-      },
-      "rgName": {
-        "type": "string",
-        "defaultValue": "shimsp-rg"
-      },
-      "rgLocation": {
-        "type": "string",
-        "defaultValue": "eastus"
-      }
+        "automationLocation": {
+            "type": "string"
+        },
+        "rgName": {
+            "type": "string"
+        },
+        "rgLocation": {
+            "type": "string"
+        }
     },
     "variables": {
         "omsTemplateLink": "[uri(deployment().properties.templateLink.uri, 'omsWorkspace.json')]",
